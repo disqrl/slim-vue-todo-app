@@ -58,8 +58,6 @@ export default {
       .catch(error => console.log(error));
     },
     deleteTodo(id) {
-      // this.todos = this.todos.filter(todo => todo.id !== id);
-      
       fetch(process.env.VUE_APP_API_URL + `/${id}`, {
         method: 'DELETE',
         headers: { "Content-Type": "application/json" }
@@ -88,7 +86,5 @@ export default {
 <style>
 body {
   background-color: #efefef;
-  font-family: system-ui;
-  font-size: 1rem;
 }
 </style>
